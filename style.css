@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "CocogooseCondensedTrial-UltraLi";
+    src: url("./font/CocogooseCondensedTrial-UltraLi.woff") format("woff");
+}
+
+header audio {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 1000;
+}
+
+main section:nth-of-type(1) {
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #F25ABC;
+}
+
+main section:nth-of-type(1) span {
+    font-family: "CocogooseCondensedTrial-UltraLi";
+    font-size: 4em;
+    line-height: 90%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #DC1D1A;
+    text-shadow:
+    -1px -1px 0 #000000, 0 -1px 0 #000000, 1px -1px 0 #000000,
+    1px 0  0 #000000,
+    1px 1px 0 #000000,
+    0 1px 0 #000000,
+    -1px 1px 0 #000000,
+    -1px 0 0 #000000;
+
+    animation: pulseText 1s infinite;
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+main section:nth-of-type(2) {
+    height: 100dvh;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    background-color: #567B1C;
+}
+
+main section:nth-of-type(2) div {
+    width: 100%;
+
+    position: absolute;
+    bottom: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+main section:nth-of-type(2) div img {
+    transform-origin: bottom;
+}
+
+main section:nth-of-type(2) div:nth-of-type(1) {
+    z-index: 4;
+    right: -45px;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+main section:nth-of-type(2) div:nth-of-type(2) {
+    z-index: 3;
+    right: -10px;
+
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+main section:nth-of-type(2) div:nth-of-type(3) {
+    z-index: 2;
+    left: -10px;
+
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+
+main section:nth-of-type(2) div:nth-of-type(4) {
+    z-index: 1;
+    left: -45px;
+
+    grid-column-start: 10;
+    grid-column-end: 13;
+}
+
+
+
+
+
+
